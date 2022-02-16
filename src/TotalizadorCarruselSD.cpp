@@ -61,7 +61,7 @@ void setup()
 	pinMode(SET_PIN, INPUT_PULLUP);
 	pinMode(BUTTON_PIN, INPUT_PULLUP);
 	pinMode(CHAIN_IN_PIN, INPUT_PULLUP);
-	pinMode(INT_PIN, INPUT);
+	pinMode(INT_PIN, INPUT_PULLUP);
 	pinMode(LED_PIN, OUTPUT);
 
 	Serial.begin(115200);
@@ -172,6 +172,8 @@ void loop()
 	}
 
 	lcd.clear();
+	lcd.print(chainStatus);
+	lcd.print(" ")	
 	lcd.print(F("Tiempo ON:"));
 	lcd.setCursor(4, 1);
 	GetReadableTime(secondsInUse, strtmp, sizeof(strtmp));
