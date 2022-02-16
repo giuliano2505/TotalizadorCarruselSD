@@ -173,7 +173,7 @@ void loop()
 
 	lcd.clear();
 	lcd.print(chainStatus);
-	lcd.print(" ")	
+	lcd.print(" ");	
 	lcd.print(F("Tiempo ON:"));
 	lcd.setCursor(4, 1);
 	GetReadableTime(secondsInUse, strtmp, sizeof(strtmp));
